@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --blue-gray: #486580;
+  --gray-100: rgb(243, 244, 246);
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -8,7 +14,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.blue-gray {
+  color: var(--blue-gray);
 }

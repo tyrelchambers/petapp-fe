@@ -6,12 +6,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import * as ROUTES from "./routes/main.routes";
 import Index from "./pages/Index/Index";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import NewPet from "./pages/NewPet/NewPet";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
         <Route exact path={ROUTES.INDEX} component={Index} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path={ROUTES.DASHBOARD} component={Dashboard} />
+        <Route exact path={ROUTES.NEW_PET} component={NewPet} />
       </Switch>
     </Router>
   </React.StrictMode>,

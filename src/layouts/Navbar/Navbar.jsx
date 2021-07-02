@@ -8,6 +8,7 @@ const Navbar = () => {
         <Link
           to={route.slug}
           className="py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
+          key={route.label}
         >
           {route.label}
         </Link>
