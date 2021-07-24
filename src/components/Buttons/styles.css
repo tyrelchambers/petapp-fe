@@ -4,3 +4,17 @@
   padding: 0.5em 1em;
   transition: all 0.2s ease;
 }
+
+.btn.main {
+  background-color: var(--english-lavender);
+}
+
+.btn.secondary {
+  color: var(--english-lavender);
+  border: 2px solid var(--english-lavender);
+}
+
+.btn.secondary:hover {
+  background-color: var(--english-lavender);
+  color: white;
+}

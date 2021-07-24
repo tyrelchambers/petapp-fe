@@ -5,3 +5,16 @@
   padding: 0 0.5em;
   border-radius: 5px;
 }
+
+.delete-vaccine {
+  display: none;
+  color: var(--gray-700);
+}
+
+.delete-vaccine:hover {
+  color: #e63946;
+}
+
+.delete-wrapper:hover .delete-vaccine {
+  display: flex;
+}

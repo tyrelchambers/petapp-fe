@@ -5,9 +5,7 @@ export const Main = ({ type = "button", children, className, onClick }) => {
   return (
     <button
       type={type}
-      className={`btn main bg-indigo-500 text-white shadow-md ${
-        className ? className : ""
-      }`}
+      className={`btn main text-white shadow-md ${className ? className : ""}`}
       onClick={onClick}
     >
       {children}
@@ -24,7 +22,7 @@ export const Secondary = ({
   return (
     <button
       type={type}
-      className={`btn secondary bg-white text-indigo-500 border-2 border-indigo-500 hover:bg-indigo-500 hover:text-white ${
+      className={`btn secondary bg-white hover:text-white ${
         className ? className : ""
       }`}
       onClick={onClick}

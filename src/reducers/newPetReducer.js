@@ -28,6 +28,17 @@ export const newPetReducer = (state, action) => {
       return clone;
     }
 
+    case "remove vaccine": {
+      const clone = {
+        ...state,
+      };
+
+      const { id } = action.data;
+      const newVaccs = clone.vaccines.filter((v, i) => i !== id);
+      clone.vaccines = newVaccs;
+      return clone;
+    }
+
     case "update input": {
       const clone = {
         ...state,

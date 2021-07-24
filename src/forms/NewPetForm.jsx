@@ -5,7 +5,7 @@ import { newPetReducer } from "../reducers/newPetReducer";
 import "./styles.css";
 import * as Buttons from "../components/Buttons/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrash, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const NewPetForm = () => {
   const [state, dispatch] = useReducer(newPetReducer, {
@@ -39,13 +39,19 @@ const NewPetForm = () => {
       },
     });
   };
-
+  const removeVaccine = (id) => {
+    dispatch({
+      type: "remove vaccine",
+      data: {
+        id,
+      },
+    });
+  };
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(state);
   };
   return (
-    <form className="mt-10 max-w-2xl form flex flex-col gap-4">
+    <form className="mt-10 max-w-2xl form flex flex-col gap-4 bg-white p-4 rounded-lg">
       <h2 className="text-xl text-gray-700  font-bold">Basic Information</h2>
 
       <InputWrapper labelFor="name" labelTitle="Pet's name">
@@ -72,13 +78,20 @@ const NewPetForm = () => {
           className="grid grid-cols-4 gap-4 w-full h-10"
           key={`vaccine_${id}`}
         >
-          <Input
-            placeholder={`vaccine #${id + 1}`}
-            value={state.type}
-            className="h-full col-span-2"
-            onChange={(e) => updateVaccine(id, "type", e.target.value)}
-            name={`vaccine${id}_name`}
-          />
+          <div className="col-span-2 flex items-center delete-wrapper">
+            <FontAwesomeIcon
+              icon={faTrash}
+              className="mr-6 delete-vaccine"
+              onClick={() => removeVaccine(id)}
+            />
+            <Input
+              placeholder={`vaccine #${id + 1}`}
+              value={state.type}
+              className="h-full w-full"
+              onChange={(e) => updateVaccine(id, "type", e.target.value)}
+              name={`vaccine${id}_name`}
+            />
+          </div>
 
           <input
             type="date"

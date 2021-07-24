@@ -5,6 +5,11 @@
 :root {
   --blue-gray: #486580;
   --gray-100: rgb(243, 244, 246);
+  --snow: #f4f4f6;
+  --rich-black-fogra-29: #0e1116ff;
+  --raisin-black: #202632ff;
+  --english-lavender: #b5838dff;
+  --old-lavender: #6d6875ff;
 }
 
 body {
@@ -12,6 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--snow);
 }
 
 .blue-gray {
