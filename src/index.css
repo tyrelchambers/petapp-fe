@@ -5,11 +5,16 @@
 :root {
   --blue-gray: #486580;
   --gray-100: rgb(243, 244, 246);
-  --snow: #f4f4f6;
-  --rich-black-fogra-29: #0e1116ff;
-  --raisin-black: #202632ff;
-  --english-lavender: #b5838dff;
-  --old-lavender: #6d6875ff;
+  --snow: hsla(300, 100%, 99%, 1);
+  --rich-black-fogra-29: hsla(218, 22%, 7%, 1);
+  --raisin-black: hsla(220, 22%, 16%, 1);
+  --english-lavender: hsla(348, 25%, 61%, 1);
+  --cyclamen: hsla(341, 66%, 67%, 1);
+  --old-lavender: hsla(315, 7%, 47%, 1);
+  --red-crayola: hsla(355, 78%, 80%, 1);
+  --french-lilac: hsla(299, 23%, 80%, 1);
+  --citrine: hsla(53, 81%, 80%, 1);
+  --white: #fff;
 }
 
 body {
@@ -17,9 +22,16 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--snow);
 }
 
 .blue-gray {
   color: var(--blue-gray);
+}
+
+.text-english-lavender {
+  color: var(--english-lavender);
+}
+
+.text-old-lavender {
+  color: var(--old-lavender);
 }

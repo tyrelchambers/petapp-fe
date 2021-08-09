@@ -1,0 +1,11 @@
+.block.yellow {
+  background-color: var(--citrine);
+}
+
+.block.liliac {
+  background-color: var(--french-lilac);
+}
+
+.block.red {
+  background-color: var(--red-crayola);
+}

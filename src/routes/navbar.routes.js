@@ -8,7 +8,7 @@ export const navbarRoutes = [
     label: "About",
   },
   {
-    slug: "/register",
-    label: "Register",
+    slug: "/login",
+    label: "Login",
   },
 ];

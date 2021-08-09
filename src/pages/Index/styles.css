@@ -1,26 +1,19 @@
 #heroVideo {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   z-index: 1;
+  top: 0;
 }
 
 .hero {
-  height: 500px;
+  height: 100vh;
   position: relative;
 }
 
 .hero-body {
-  background: rgb(26, 32, 44);
-  background: linear-gradient(
-    90deg,
-    rgba(26, 32, 44, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
   position: absolute;
   z-index: 2;
-  height: 100%;
-  width: 100%;
 }

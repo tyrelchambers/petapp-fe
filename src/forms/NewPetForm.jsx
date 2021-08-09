@@ -5,13 +5,16 @@ import { newPetReducer } from "../reducers/newPetReducer";
 import "./styles.css";
 import * as Buttons from "../components/Buttons/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTrash, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { H2 } from "../components/Headings/Headings";
+import { generateQRCode } from "../api/generateQRCode";
 
 const NewPetForm = () => {
   const [state, dispatch] = useReducer(newPetReducer, {
     name: "",
     breed: "",
-
+    home: "",
+    contacts: [],
     vaccines: [],
   });
 
@@ -49,10 +52,11 @@ const NewPetForm = () => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
+    generateQRCode(state);
   };
   return (
     <form className="mt-10 max-w-2xl form flex flex-col gap-4 bg-white p-4 rounded-lg">
-      <h2 className="text-xl text-gray-700  font-bold">Basic Information</h2>
+      <H2>Basic Information</H2>
 
       <InputWrapper labelFor="name" labelTitle="Pet's name">
         <Input
@@ -67,7 +71,18 @@ const NewPetForm = () => {
         <Input placeholder="what breed is your pet?" name="breed" />
       </InputWrapper>
 
-      <h2 className="text-xl text-gray-700  font-bold">Vaccines</h2>
+      <InputWrapper labelFor="home" labelTitle="Pet's home">
+        <Input placeholder="where does your pet live?" name="home" />
+      </InputWrapper>
+
+      <InputWrapper labelFor="contacts" labelTitle="Contact information">
+        <Input
+          placeholder="Who should be contacted if they're lost?"
+          name="contacts"
+        />
+      </InputWrapper>
+
+      <H2>Vaccines</H2>
       <div className="grid grid-cols-4 gap-4">
         <p className="col-span-2 blue-gray">Type</p>
         <p className="blue-gray">Administed</p>

@@ -7,6 +7,7 @@ import * as ROUTES from "./routes/main.routes";
 import Index from "./pages/Index/Index";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import NewPet from "./pages/NewPet/NewPet";
+import Login from "./pages/Login/Login";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route exact path={ROUTES.INDEX} component={Index} />
         <Route exact path={ROUTES.DASHBOARD} component={Dashboard} />
         <Route exact path={ROUTES.NEW_PET} component={NewPet} />
+        <Route exact path={ROUTES.LOGIN} component={Login} />
       </Switch>
     </Router>
   </React.StrictMode>,

@@ -1,28 +1,18 @@
 import React from "react";
 import Header from "../../layouts/Header/Header";
-import Wrapper from "../../layouts/Wrapper/Wrapper";
 import "./styles.css";
-import video from "../../assets/bg-video.mp4";
 import { H1 } from "../../components/Headings/Headings";
-
+import Wrapper from "../../layouts/Wrapper/Wrapper";
+import Search from "../../components/Search/Search";
 const Index = () => {
   return (
     <Wrapper>
-      <Header />
-
-      <section className="hero mt-10 rounded-lg shadow-lg overflow-hidden">
-        <video autoPlay muted loop id="heroVideo">
-          <source src={video} type="video/mp4" />
-        </video>
-        <div className="hero-body flex items-center">
-          <H1 className="text-6xl max-w-2xl ml-8 text-white leading-normal">
-            Protect the pet you love.{" "}
-            <span className="text-green-400 font-black text-7xl">
-              They're family.
-            </span>
-          </H1>
-        </div>
-      </section>
+      <div className="w-full flex items-center flex-col max-w-2xl ml-auto mr-auto mt-20">
+        <H1 className="mb-10 text-center text-4xl">
+          We help you take care of your pets. Because after all, they're family.
+        </H1>
+        <Search />
+      </div>
     </Wrapper>
   );
 };
