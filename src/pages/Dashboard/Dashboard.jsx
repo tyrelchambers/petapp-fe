@@ -11,8 +11,6 @@ import Block from "../../components/Block/Block";
 const Dashboard = () => {
   return (
     <Wrapper>
-      <Header></Header>
-
       <section className="dashboard-hero w-full rounded-3xl mt-8 p-12 flex items-center shadow-lg">
         <div className="body w-1/2">
           <p className="text-5xl font-bold text-white">Welcome to PetAlert!</p>
@@ -37,10 +35,12 @@ const Dashboard = () => {
           <p className="text-lg text-gray-700">View your registered pets</p>
         </Block>
 
-        <Block type="red">
-          <FontAwesomeIcon icon={faPlus} className="text-2xl text-gray-700" />
-          <p className="text-lg text-gray-700">View your registered pets</p>
-        </Block>
+        <Link to="/pet/new">
+          <Block type="red">
+            <FontAwesomeIcon icon={faPlus} className="text-2xl text-gray-700" />
+            <p className="text-lg text-gray-700">Register a pet</p>
+          </Block>
+        </Link>
       </section>
     </Wrapper>
   );

@@ -55,7 +55,7 @@ const NewPetForm = () => {
     generateQRCode(state);
   };
   return (
-    <form className="mt-10 max-w-2xl form flex flex-col gap-4 bg-white p-4 rounded-lg">
+    <form className="mt-10 max-w-2xl form flex flex-col bg-white  rounded-lg">
       <H2>Basic Information</H2>
 
       <InputWrapper labelFor="name" labelTitle="Pet's name">
@@ -125,14 +125,16 @@ const NewPetForm = () => {
           />
         </div>
       ))}
-      <Buttons.Secondary onClick={addVaccineHandler}>
+      <Buttons.Secondary className="mt-4" onClick={addVaccineHandler}>
         <FontAwesomeIcon icon={faPlus} className="mr-4" />
         Add Vaccine
       </Buttons.Secondary>
 
-      <hr />
+      <hr className="mt-4" />
 
-      <Buttons.Main onClick={(e) => submitHandler(e)}>Save</Buttons.Main>
+      <Buttons.Main className="mt-4" onClick={(e) => submitHandler(e)}>
+        Save
+      </Buttons.Main>
     </form>
   );
 };

@@ -7,8 +7,6 @@ import "./styles.css";
 const NewPet = () => {
   return (
     <Wrapper>
-      <Header />
-
       <main className="mt-10">
         <H1>Register a pet</H1>
         <NewPetForm />

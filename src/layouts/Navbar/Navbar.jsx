@@ -1,18 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { navbarRoutes } from "../../routes/navbar.routes";
+import { useUser } from "../../hooks/queries/useUser";
+
 const Navbar = () => {
+  const { data } = useUser();
   return (
     <nav>
-      {navbarRoutes.map((route) => (
+      <Link
+        to="/"
+        className="py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
+      >
+        Home
+      </Link>
+
+      <Link
+        to="/about"
+        className="py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
+      >
+        About
+      </Link>
+
+      {!data ? (
         <Link
-          to={route.slug}
+          to="/login"
           className="py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
-          key={route.label}
         >
-          {route.label}
+          Login
         </Link>
-      ))}
+      ) : (
+        <Link
+          to="/signout"
+          className="py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
+        >
+          Sign out
+        </Link>
+      )}
     </nav>
   );
 };
