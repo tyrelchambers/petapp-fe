@@ -1,5 +1,4 @@
 import React from "react";
-import { H1 } from "../../components/Headings/Headings";
 import Navbar from "../Navbar/Navbar";
 
 const Header = (props) => {

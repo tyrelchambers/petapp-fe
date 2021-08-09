@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../layouts/Header/Header";
 import "./styles.css";
 import { H1 } from "../../components/Headings/Headings";
 import Wrapper from "../../layouts/Wrapper/Wrapper";

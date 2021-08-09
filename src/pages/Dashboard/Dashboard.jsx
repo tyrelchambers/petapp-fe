@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../layouts/Header/Header";
 import Wrapper from "../../layouts/Wrapper/Wrapper";
 import { Link } from "react-router-dom";
 import { NEW_PET } from "../../routes/main.routes";

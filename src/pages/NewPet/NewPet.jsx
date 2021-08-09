@@ -1,7 +1,6 @@
 import React from "react";
 import { H1 } from "../../components/Headings/Headings";
 import NewPetForm from "../../forms/NewPetForm";
-import Header from "../../layouts/Header/Header";
 import Wrapper from "../../layouts/Wrapper/Wrapper";
 import "./styles.css";
 const NewPet = () => {
