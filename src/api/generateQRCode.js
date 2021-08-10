@@ -1,11 +1,5 @@
-import axios from "axios";
+import { request } from "../config/axios";
 
 export const generateQRCode = async (data) => {
-  try {
-    return await axios.post("http://localhost:4000/qr/generate", {
-      ...data,
-    });
-  } catch (error) {
-    return error;
-  }
+  return request.post("qr/v1/generate", data);
 };

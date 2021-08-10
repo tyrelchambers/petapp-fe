@@ -7,7 +7,7 @@ import * as Buttons from "../components/Buttons/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { H2 } from "../components/Headings/Headings";
-import { generateQRCode } from "../api/generateQRCode";
+import { useNewPet } from "../hooks/mutations/useNewPet";
 
 const NewPetForm = () => {
   const [state, dispatch] = useReducer(newPetReducer, {
@@ -17,6 +17,7 @@ const NewPetForm = () => {
     contacts: [],
     vaccines: [],
   });
+  const createNewPet = useNewPet();
 
   const addVaccineHandler = () => {
     dispatch({ type: "add vaccine" });
@@ -52,7 +53,7 @@ const NewPetForm = () => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    generateQRCode(state);
+    createNewPet.mutate(state);
   };
   return (
     <form className="mt-10 max-w-2xl form flex flex-col bg-white  rounded-lg">
