@@ -1,11 +1,11 @@
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 .input-wrapper__label {
-  color: var(--blue-gray);
+  color: var(--raisin-black);
   margin-bottom: 0.5em;
   font-weight: 500;
 }

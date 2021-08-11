@@ -35,6 +35,15 @@ const Navbar = () => {
           Sign out
         </Link>
       )}
+
+      {data && (
+        <Link
+          to="/dashboard"
+          className="border-l-2 border-gray-300 py-1 px-4 text-gray-500 hover:text-gray-800 transition-all"
+        >
+          Dashboard
+        </Link>
+      )}
     </nav>
   );
 };
