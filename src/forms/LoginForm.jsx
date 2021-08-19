@@ -21,7 +21,7 @@ const LoginForm = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   return (
-    <form>
+    <form className="mt-10">
       <InputWrapper labelFor="email" labelTitle="Email">
         <Input
           type="email"

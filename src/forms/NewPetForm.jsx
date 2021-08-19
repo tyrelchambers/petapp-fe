@@ -15,6 +15,7 @@ const NewPetForm = () => {
     name: "",
     breed: "",
     home: "",
+    gender: "",
     contacts: [],
     vaccines: [],
   });
@@ -71,15 +72,25 @@ const NewPetForm = () => {
         </InputWrapper>
 
         <InputWrapper labelFor="breed" labelTitle="Breed">
-          <Input placeholder="what breed is your pet?" name="breed" />
+          <Input
+            placeholder="what breed is your pet?"
+            name="breed"
+            value={state.breed}
+            onChange={(e) => inputHandler(e)}
+          />
         </InputWrapper>
 
         <InputWrapper labelFor="gender" labelTitle="Gender">
-          <Input placeholder="what gender is your pet?" name="gender" />
+          <Input
+            placeholder="what gender is your pet?"
+            name="gender"
+            value={state.gender}
+            onChange={(e) => inputHandler(e)}
+          />
         </InputWrapper>
 
         <InputWrapper labelFor="home" labelTitle="Home">
-          <Input placeholder="where does your pet live?" name="home" />
+          <Select />
         </InputWrapper>
 
         <InputWrapper labelTitle="Birthday" labelFor="birthday">

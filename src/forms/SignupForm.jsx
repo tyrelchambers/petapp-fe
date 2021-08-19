@@ -19,7 +19,7 @@ const SignupForm = () => {
   };
 
   return (
-    <form>
+    <form className="mt-10">
       <InputWrapper labelFor="email" labelTitle="Email">
         <Input
           placeholder="email@example.com"

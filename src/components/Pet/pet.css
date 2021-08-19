@@ -1,0 +1,12 @@
+.pet-avatar {
+  width: 200px;
+  height: 100%;
+}
+
+.pet-wrapper {
+  height: 200px;
+}
+
+.pet-name {
+  color: var(--old-lavender);
+}
