@@ -16,6 +16,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Pets from "./pages/Pets/Pets";
+import Settings from "./pages/Settings/Settings";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ ReactDOM.render(
           <PrivateRoute exact path={ROUTES.ALL_PETS} component={Pets} />
           <Route exact path={ROUTES.LOGIN} component={Login} />
           <Route exact path={ROUTES.SIGNUP} component={Signup} />
+          <PrivateRoute path={ROUTES.SETTINGS} component={Settings} />
           <Route
             exact
             path={ROUTES.SIGNOUT}

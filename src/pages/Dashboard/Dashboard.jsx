@@ -29,10 +29,15 @@ const Dashboard = () => {
       />
 
       <section className="grid grid-cols-3 gap-8 mt-10">
-        <Block type="yellow">
-          <FontAwesomeIcon icon={faIdCard} className="text-2xl text-gray-700" />
-          <p className="text-lg text-gray-700">Review your contact info</p>
-        </Block>
+        <Link to="/dashboard/profile">
+          <Block type="yellow">
+            <FontAwesomeIcon
+              icon={faIdCard}
+              className="text-2xl text-gray-700"
+            />
+            <p className="text-lg text-gray-700">Edit your profile</p>
+          </Block>
+        </Link>
 
         <Link to="/pets">
           <Block type="liliac">

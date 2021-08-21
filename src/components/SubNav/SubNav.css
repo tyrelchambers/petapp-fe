@@ -1,0 +1,14 @@
+.subnav__item.active {
+  background-color: var(--old-lavender);
+  color: white;
+}
+
+.subnav {
+  background: var(--gray-100);
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+.subnav__item {
+  color: var(--old-lavender);
+}

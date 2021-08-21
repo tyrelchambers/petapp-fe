@@ -19,7 +19,7 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,4 +34,12 @@ body {
 
 .text-old-lavender {
   color: var(--old-lavender);
+}
+
+hr {
+  margin: 1em 0;
+}
+
+p {
+  color: var(--blue-gray);
 }
