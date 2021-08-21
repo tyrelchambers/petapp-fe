@@ -17,3 +17,7 @@
   background-color: var(--english-lavender);
   color: white;
 }
+
+.btn.main:hover {
+  transform: scale(0.97);
+}
